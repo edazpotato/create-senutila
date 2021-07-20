@@ -1,0 +1,23 @@
+{
+  "name": "create-senutila",
+  "version": "0.1.0",
+  "description": "Creates the project structure for a new Senutila Discord bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edazpotato/create-senutila.git"
+  },
+  "author": "Edazpotato",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edazpotato/create-senutila/issues"
+  },
+  "homepage": "https://github.com/edazpotato/create-senutila#readme",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^8.0.0"
+  }
+}
