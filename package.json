@@ -1,23 +1,50 @@
 {
   "name": "create-senutila",
-  "version": "0.1.0",
   "description": "Creates the project structure for a new Senutila Discord bot.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.1.0",
+  "author": "Edazpotato @edazpotato",
+  "bin": {
+    "senutila": "./bin/run"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/edazpotato/create-senutila.git"
-  },
-  "author": "Edazpotato",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/edazpotato/create-senutila/issues"
-  },
-  "homepage": "https://github.com/edazpotato/create-senutila#readme",
+  "bugs": "https://github.com/edazpotato/create-senutila/issues",
   "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.2",
     "chalk": "^4.1.1",
-    "commander": "^8.0.0"
-  }
+    "cli-ux": "^5.6.3",
+    "inquirer": "^8.1.2",
+    "tslib": "^1.14.1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.26.0",
+    "@types/node": "^10.17.60",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.10"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/edazpotato/create-senutila",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "senutila"
+  },
+  "repository": "edazpotato/create-senutila",
+  "scripts": {
+    "prepack": "rimraf lib && tsc -b && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md",
+    "build": "pnpm run test && pnpm run prepack"
+  },
+  "types": "lib/index.d.ts"
 }
